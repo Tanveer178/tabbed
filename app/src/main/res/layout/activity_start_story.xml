@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.abiduzair.tabbed.StartStory">
+
+    <EditText
+        android:id="@+id/titlestart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title of your story"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        />
+    <EditText
+        android:id="@+id/storystart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Begin your story..."
+        />
+    <Button
+        android:id="@+id/pushstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PUSH"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
