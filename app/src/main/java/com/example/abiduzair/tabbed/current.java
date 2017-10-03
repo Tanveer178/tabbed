@@ -9,9 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -68,45 +71,15 @@ String t1,t2;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View myinflatedView=inflater.inflate(R.layout.fragment_current, container, false);
+        View myinflatedView=inflater.inflate(R.layout.word_list, container, false);
         // Inflate the layout for this fragment
-        Bundle bundle = getActivity().getIntent().getExtras();
-        if (bundle != null) {
-            t1= bundle.getString("e1");
-            t2= bundle.getString("e2");
-            RelativeLayout rl = (RelativeLayout) myinflatedView.findViewById(R.id.rl);
-            ScrollView sv = (ScrollView) myinflatedView.findViewById(R.id.sv);
-            LinearLayout ll1 = (LinearLayout) myinflatedView.findViewById(R.id.ll1);
-            CardView cv=(CardView)myinflatedView.findViewById(R.id.cv);
-            LinearLayout ll2 = (LinearLayout) myinflatedView.findViewById(R.id.ll2);
-            LinearLayout ll3 = (LinearLayout) myinflatedView.findViewById(R.id.ll3);
-            TextView tv1 = (TextView) myinflatedView.findViewById(R.id.tv1);
-            TextView tv2 = (TextView) myinflatedView.findViewById(R.id.tv2);
-            tv1.setText(t1);
-            tv2.setText(t2);
-            if (tv1.getParent() != null)
-                ((ViewGroup) tv1.getParent()).removeView(tv1);
-            ll3.addView(tv1);
-            if (tv2.getParent() != null)
-                ((ViewGroup) tv2.getParent()).removeView(tv2);
-            ll3.addView(tv2);
-            if (ll3.getParent() != null)
-                ((ViewGroup) ll3.getParent()).removeView(ll3);
-            ll2.addView(ll3);
-            if (ll2.getParent() != null)
-                ((ViewGroup) ll2.getParent()).removeView(ll2);
-            cv.addView(ll2);
-            if (cv.getParent() != null)
-                ((ViewGroup) cv.getParent()).removeView(cv);
-            ll1.addView(cv);
-            if (ll1.getParent() != null)
-                ((ViewGroup) ll1.getParent()).removeView(ll1);
-            sv.addView(ll1);
-            if (sv.getParent() != null)
-                ((ViewGroup) sv.getParent()).removeView(sv);
-            rl.addView(sv);
-        }
-        return myinflatedView;
+
+        final ArrayList<stories> storiesArrayList = new ArrayList<stories>();
+        storiesArrayList.add(new stories("lion","hiiiiii"));
+        storiesadapter adapter = new storiesadapter(getActivity(), storiesArrayList);
+        ListView listView = (ListView) myinflatedView.findViewById(R.id.list);
+        listView.setAdapter(adapter);
+                return myinflatedView;
 
     }
 
