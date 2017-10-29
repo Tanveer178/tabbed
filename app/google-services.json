@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "172343258840",
+    "firebase_url": "https://tabbed-e1f47.firebaseio.com",
+    "project_id": "tabbed-e1f47",
+    "storage_bucket": "tabbed-e1f47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172343258840:android:8a8e2216441fedcc",
+        "android_client_info": {
+          "package_name": "com.example.abiduzair.tabbed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172343258840-u5hkgoogl6tt5qdaom2jmi52c16tchs7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.abiduzair.tabbed",
+            "certificate_hash": "16719ab944819315c01df603a63872ad81e9f1c5"
+          }
+        },
+        {
+          "client_id": "172343258840-phlleddqhivfpsog1220g4osvh3bivrs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBOYjFm3A8V6VVlp3NSnxKCmbKK2Vc9b4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172343258840-phlleddqhivfpsog1220g4osvh3bivrs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
